@@ -5,14 +5,12 @@ fn main() {
     let mut iterate: String = String::new();
     read(&mut iterate);
     
-    let iterate: &str = iterate.as_str().trim();
-    let iterate: i32 = iterate.to_owned().parse::<i32>().expect("Please input a number for iterator");
+    let iterate: i32 = iterate.trim().parse::<i32>().expect("Please input a number for iterator");
 
     for _ in 0..iterate {
         read(&mut input);
 
-        let input: &str = input.as_str().trim();
-        let number: i32 = input.to_owned().parse::<i32>().expect("Please input a number");
+        let number: i32 = input.trim().parse::<i32>().expect("Please input a number");
 
         let result = ((((((((((number * 1021) - 98) / 17) + 7582) *209) /37) *11) +9876) -1) *2) -9876;
 

@@ -49,6 +49,7 @@ while i < q
   # langsung return default value
   # n1 = 0 , n2 = 0
 
+  puts
   puts "#{step_x} #{step_y}"
   i += 1
 end

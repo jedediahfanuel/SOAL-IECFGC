@@ -26,11 +26,11 @@ def proses(arr_mhs, arr_dsn)
   tick : UInt32 = 0
 
   arr_dsn.each do |who_interact|
-    j : UInt32 = 0
-    while j < arr_mhs.size
+    arr_mhs.size.times do |j|
       if arr_mhs[j] == who_interact
           # Tambah tick
           tick += 2 * j
+          
           # Geser ranking keaktifan
           (1..j).reverse_each do |k|
             arr_mhs[k] = arr_mhs[k - 1]
@@ -39,7 +39,6 @@ def proses(arr_mhs, arr_dsn)
           # Mindahin mahasiswa terbaru yang aktif
           arr_mhs[0] = who_interact
       end
-      j += 1
     end
   end
 

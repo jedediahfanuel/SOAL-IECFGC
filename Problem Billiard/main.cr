@@ -2,16 +2,10 @@
 q = gets.not_nil!.to_i
 
 q.times do |i|
-  # Input ukuran array
-  n = gets.not_nil!.to_i
-  m = gets.not_nil!.to_i
+  # Input ukuran array & posisi array
+  n, m, x, y = gets.not_nil!.split.map &.to_i
 
-  # Input posisi array
-  x = gets.not_nil!.to_i
-  y = gets.not_nil!.to_i
-
-  x -= 1
-  y -= 1
+  x, y = x-1, y-1
 
   arr = Array.new(n){Array.new(m){0}}
 
